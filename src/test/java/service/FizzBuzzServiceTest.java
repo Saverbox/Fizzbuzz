@@ -12,5 +12,5 @@ public class FizzBuzzServiceTest {
         result = fizzBuzzService.getResultOfNumber(2);
         Assertions.assertEquals("2",result, "Normale Zahl als Resultat erwartet");
     }
-    
+
 }
