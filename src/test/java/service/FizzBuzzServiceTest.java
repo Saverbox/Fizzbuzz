@@ -13,4 +13,25 @@ public class FizzBuzzServiceTest {
         Assertions.assertEquals("2",result, "Normale Zahl als Resultat erwartet");
     }
 
+    @Test
+    void pruefeDurchDreiTeilbareZahl() {
+        FizzBuzzService fizzBuzzService = new FizzBuzzService();
+        var result = fizzBuzzService.getResultOfNumber(3);
+        Assertions.assertEquals("Fizz", result, "Fizz als Resultat erwartet.");
+    }
+
+    @Test
+    void pruefeDurchFuenfTeilbareZahl() {
+        FizzBuzzService fizzBuzzService = new FizzBuzzService();
+        var result = fizzBuzzService.getResultOfNumber(5);
+        Assertions.assertEquals("Buzz", result, "Buzz als Resultat erwartet.");
+    }
+
+    @Test
+    void pruefeDurchDreiUndFuenfTeilbareZahl() {
+        FizzBuzzService fizzBuzzService = new FizzBuzzService();
+        var result = fizzBuzzService.getResultOfNumber(15);
+        Assertions.assertEquals("FizzBuzz", result, "Fizz als Resultat erwartet.");
+    }
+
 }
